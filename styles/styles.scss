@@ -1,0 +1,172 @@
+@import "normalize";
+
+$white: #fff;
+$red: #D11128;
+$gold: #F6E017AB;
+
+// border-box
+* {
+  box-sizing: border-box;
+}
+
+a{
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.container{
+  max-width: 1400px;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.header{
+  background: #000;
+  padding-top: 28px;
+  position: relative;
+  color: $white;
+  height: 992px;
+  &::after{
+    content: '';
+    display: block;
+    background: url('../images/coca-girl.jpg') no-repeat right center/cover;
+    width: 40%;
+    height: 100%;
+    border-radius: 0px 0px 100px 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  width: 739px;
+  padding-bottom: 76px;
+}
+
+.logo{
+  position: absolute;
+}
+
+.logo img{
+  width: 100%;
+}
+
+.offer {
+  max-width: 594px;
+  height: 346px;
+  padding: 32px 32px 32px 32px;
+  margin-bottom: 144px;
+    &__intro {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 28px;
+      color: #FFFFFF;
+      margin-bottom: 57px;
+    }
+    &__title {
+      font-weight: 900;
+      font-size: 40px;
+      line-height: 47px;
+      letter-spacing: 0.15em;
+      margin-bottom: 57px;
+      color: $gold;
+    }
+    &__outro {
+      font-weight: 700;
+      font-size: 45px;
+      line-height: 53px;
+      margin-bottom: 144px;
+    }
+}
+
+.slides {
+  width: 810px;
+    &__item {
+      display: flex;
+    }
+    &__item-coca {
+      height: 198px;
+      background: url('../images/coca-cola.png') no-repeat center center;
+      background-size: cover;
+      padding: 54px 54px 32px 54px;
+      align-items: center;
+    }
+    &__title-big {
+      font-family: 'Roboto', sans-serif;
+      font-size: 36px;
+      line-height: 40px;
+      text-align: center;
+      letter-spacing: 0.15em;
+      color: $white;
+        a{
+          text-decoration: none;
+        }
+    }
+    &__item-descr {
+      height: 198px;
+      background: $red;
+      padding-top: 54px;
+    }
+    &__text {
+      padding-left: 36px;
+      padding-right: 66px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.59em;
+    }
+}
+
+.promo{
+    background: black;
+    border-radius: 50%;
+    width: 495px;
+    height: 495px;
+    position: relative;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -150px;
+    z-index: 9;
+    &::before{
+        display: block;
+        content: '';
+        background: rgba(247, 224, 23, 0.67);
+        box-shadow: 0px 4px 50px rgba(234, 214, 36, 0.46);
+        border-radius: 50%;
+        width: 128.07px;
+        height: 147px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -15px;
+        z-index: 10;
+      }
+  
+    &::after{
+        content: '';
+        display: block;
+        background: url('../images/coca1.png') no-repeat center center;
+        width: 337px;
+        height: 298px;
+        position: absolute;
+        left: 50%;
+        margin-left: -145px;
+        top: 50%;
+        margin-top: -155px;
+        z-index: 15;
+    }
+
+}
